@@ -6,16 +6,21 @@ function Todo({ todo, toggleTodo }) {
   };
 
   return (
-    <div>
-      <label>
-        <input
-          type="checkbox"
-          checked={todo.completed}
-          onChange={handleTodoClick}
-        />
-        {todo.name}
-      </label>
-    </div>
+    <>
+      <tr>
+        <td className="text-center col-1">
+          <input
+            className="form-check-input"
+            type="checkbox"
+            checked={todo.completed}
+            onChange={handleTodoClick}
+          />
+        </td>
+        <td>
+          <label>{todo.description}</label>
+        </td>
+      </tr>
+    </>
   );
 }
 
